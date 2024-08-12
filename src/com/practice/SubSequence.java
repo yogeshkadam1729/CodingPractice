@@ -21,8 +21,20 @@ public class SubSequence {
 			if(!found) return false;				
 		}
 			return true;
-		}	
-        
-    }
+		}
+
+	public static boolean isSubsequenceOptimal(String s, String t) {
+		int index = 0;
+		for(int i =0; i<s.length();i++)
+		{
+			int charPresent = t.indexOf(s.charAt(i),index);
+			if(charPresent == -1) return false;
+			index = charPresent+1;
+		}
+		return true;
+	}
+
+
+}
 
 
