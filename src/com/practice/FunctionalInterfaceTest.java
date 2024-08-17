@@ -12,7 +12,7 @@ public class FunctionalInterfaceTest {
     public static void main(String args[])
     {
         List<Integer> numList = List.of(1,2,3,4,5);
-        numList.stream().forEach(e -> FunctionalInterface.printResult(FunctionalInterface.doSquare(e)));
+        //numList.stream().forEach(e -> FunctionalInterface.printResult(FunctionalInterface.doSquare(e)));
 
 
 
@@ -25,7 +25,7 @@ public class FunctionalInterfaceTest {
 
         /*Thread t = new Thread(new FunctionalInterfaceTest()::printMsg);
         t.start();*/
-       /*List<String> vowels = List.of("a", "e", "i", "o", "u");
+       List<String> vowels = List.of("a", "e", "i", "o", "u");
 // sequential stream - nothing to combine
         StringBuilder result = vowels.stream().collect(StringBuilder::new, (x, y) -> x.append(y),
                 (a, b) -> a.append(",").append(b));
@@ -35,22 +35,22 @@ public class FunctionalInterfaceTest {
                 (a, b) -> a.append(",").append(b));
         System.out.println(result1.toString());
         Collections.unmodifiableList(new ArrayList<>(Arrays.asList("a","b","c","d")));
-        Collections.singletonList(new ArrayList<>(Arrays.asList("a","b","c","d")));*/
+        Collections.singletonList(new ArrayList<>(Arrays.asList("a","b","c","d")));
 
         //check the supplier
-        /*Supplier<Integer> randomNumberSupplier = () -> (int) (Math.random() * 100);
+        Supplier<Integer> randomNumberSupplier = () -> (int) (Math.random() * 100);
         System.out.println(randomNumberSupplier.get());
-        System.out.println(randomNumberSupplier.get());*/
+        System.out.println(randomNumberSupplier.get());
 
         //check normal input output function
-        /*Function<Integer, String> intToString = num -> "Number: " + num;
-        System.out.println(intToString.apply(42)); // "Number: 42"*/
+        Function<Integer, String> intToString = num -> "Number: " + num;
+        System.out.println(intToString.apply(42)); // "Number: 42"
 
-        /*Function<Integer,String> intToStringconversion = (num) -> {
+        Function<Integer,String> intToStringconversion = (num) -> {
             return "Number is converted to "+num;
         };
 
-        new HashSetCheck().acceptFunctionalInterface(intToStringconversion);*/
+        new HashSetCheck().acceptFunctionalInterface(intToStringconversion);
 
 
     }
