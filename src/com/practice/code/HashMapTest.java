@@ -23,5 +23,10 @@ public class HashMapTest {
         System.out.println(sortedMap1);
         Set<String> flatStringSet = sortedMap1.entrySet().stream().flatMap(e-> Stream.of(e.getKey() +" "+e.getValue())).collect(Collectors.toSet());
         System.out.println(flatStringSet);
+
+        HashMap<String, List<Integer>> map1 = new HashMap<>();
+        map1.put("A", Arrays.asList(1,21,33,41));
+        map1.put("B", Arrays.asList(2,5,37,43));
+        map1.values().stream().flatMap(List::stream).sorted().forEach(System.out::println);
     }
 }
