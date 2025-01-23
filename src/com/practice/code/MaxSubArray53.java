@@ -22,16 +22,15 @@ public class MaxSubArray53 {
         int arraySum = 0;
         int maxSubArraySum = 0;
         for(int num : nums) {
-            int newNum = num * -1;
-            arraySum += newNum;
-            if(newNum < 0)
+            arraySum += -num;
+            if(-num < 0)
                 maxSubArraySum = 0;
             else
-                maxSubArraySum += newNum;
+                maxSubArraySum += -num;
 
         }
-        return arraySum;
-       // return -(arraySum-maxSubArraySum);
+
+        return -(arraySum-maxSubArraySum);
     }
 
 }
