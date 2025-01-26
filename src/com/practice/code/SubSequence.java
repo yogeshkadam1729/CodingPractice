@@ -3,7 +3,7 @@ package com.practice.code;
 public class SubSequence {
 
 	public static void main(String[] args) {
-		System.out.println(isSubsequence("axc", "ahbgdc"));
+		System.out.println(isSubsequenceOptimal("abc", "ahbgdc"));
 
 	}
 	

@@ -11,7 +11,8 @@ public class TestCode {
     public static void main(String args[]) throws IOException {
 
 
-
+        SearchInsertPosition searchInsertPosition = new SearchInsertPosition();
+        searchInsertPosition.searchInsert(new int[]{1,3,5,6},5);
     }
 
 }

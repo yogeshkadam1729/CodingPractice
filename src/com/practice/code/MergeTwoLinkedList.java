@@ -1,32 +1,36 @@
 package com.practice.code;
 
 public class MergeTwoLinkedList {
-    public ListNode solution(ListNode list1, ListNode list2) {
-        list1 = new ListNode(2,null);
-        list2 = new ListNode(1,null);
-        if(list1 == null) return list2;
-        ListNode head1 = list1;
-        ListNode head2 = list2;
-        while(head1 != null && head2 != null)
+    public ListNode solution(ListNode l1, ListNode l2) {
+        ListNode temp_node = new ListNode(0);
+        ListNode current_node = temp_node;
+        while(l1 != null && l2!= null)
         {
-            ListNode temp1 = head1.next;
-            ListNode temp2 = head2.next;
-            if(head1.val <= head2.val)
+            if(l1.val < l2.val)
             {
-                head1.next = head2;
-                head2.next = temp1;
-                head1 = (head1.val == head2.val) ? temp1 : head2;
+                current_node.next = l1;
+                l1 = l1.next;
             }
             else
             {
-                head2.next = head1;
-                head1 = head2;
-                list1 = head1;
+                current_node.next = l2;
+                l2 = l2.next;
             }
-            head2 = temp2;
+            current_node = current_node.next;
+        }
+        if(l1 != null)
+        {
+            current_node.next = l1;
+            l1 = l1.next;
+        }
+        if(l2 != null)
+        {
+            current_node.next = l2;
+            l2 = l2.next;
         }
 
-        return list1;
+        return temp_node.next;
+
     }
 
 }
