@@ -9,10 +9,9 @@ import java.util.stream.Collectors;
 
 public class TestCode {
     public static void main(String args[]) throws IOException {
-
-
-        SearchInsertPosition searchInsertPosition = new SearchInsertPosition();
-        searchInsertPosition.searchInsert(new int[]{1,3,5,6},5);
+            GroupAnagrams49 groupAnagrams49 = new GroupAnagrams49();
+            List<List<String>> output = groupAnagrams49.groupAnagrams(new String[]{"cab","tin","pew","duh","may","ill","buy","bar","max","doc"});
+            System.out.println(output);
     }
 
 }
