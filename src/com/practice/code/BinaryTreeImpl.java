@@ -2,6 +2,7 @@ package com.practice.code;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class BinaryTreeImpl {
@@ -161,11 +162,16 @@ public class BinaryTreeImpl {
 
 class Node
 {
+    int val;
     int key;
     Node left;
     Node right;
+    public List<Node> neighbors;
     public Node(int key) {
+        this.val = key;
         this.key = key;
         left = right = null;
+        neighbors = new ArrayList<>();
     }
+
 }
