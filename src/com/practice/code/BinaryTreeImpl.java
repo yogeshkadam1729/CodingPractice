@@ -131,6 +131,7 @@ public class BinaryTreeImpl {
         }
         System.out.println(visitedList);
     }
+
     public static void main(String args[]) {
         BinaryTreeImpl tree = new BinaryTreeImpl();
 
@@ -162,8 +163,8 @@ public class BinaryTreeImpl {
 
 class Node
 {
-    int val;
-    int key;
+    Integer val;
+    Integer key;
     Node left;
     Node right;
     public List<Node> neighbors;

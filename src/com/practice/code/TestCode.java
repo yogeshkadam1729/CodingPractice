@@ -9,9 +9,9 @@ import java.util.stream.Collectors;
 
 public class TestCode {
     public static void main(String args[]) throws IOException {
-            GroupAnagrams49 groupAnagrams49 = new GroupAnagrams49();
-            List<List<String>> output = groupAnagrams49.groupAnagrams(new String[]{"cab","tin","pew","duh","may","ill","buy","bar","max","doc"});
-            System.out.println(output);
+        SurroundedRegion130 surroundedRegion130 = new SurroundedRegion130();
+        char [][]board = {{'X','O','X','O','X','O'},{'O','X','O','X','O','X'},{'X','O','X','O','X','O'},{'O','X','O','X','O','X'}};
+        surroundedRegion130.solve(board);
     }
 
 }
