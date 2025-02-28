@@ -8,9 +8,8 @@ import java.util.List;
 public class  TestCode {
 
     public static void main(String args[]) {
-        MinimumGeneticMutation433 minimumGeneticMutation433 = new MinimumGeneticMutation433();
-        minimumGeneticMutation433.minMutation("AACCGGTT","AAACGGTA",new String[]{"AACCGGTA","AACCGCTA","AAACGGTA"});
-
+        LetterCombination17 letterCombination17 = new LetterCombination17();
+        System.out.println(letterCombination17.letterCombinations("234"));
     }
 
 }
