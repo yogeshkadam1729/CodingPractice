@@ -24,4 +24,5 @@ public class SingletonBillPaughImpl implements Serializable {
     protected Object readResolve() {
         return getInstance();
     }
+
 }
