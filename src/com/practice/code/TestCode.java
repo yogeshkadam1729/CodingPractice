@@ -11,11 +11,8 @@ import java.util.List;
 public class  TestCode {
 
     public static void main(String args[]) {
-       GasStation134 gasStation134 = new GasStation134();
-
-       // System.out.println(minimumPathSum64.minPathSum(new int[][]{{1,3,1},{1,5,1},{4,2,1}}));
-       System.out.println(gasStation134.canCompleteCircuit(new int[]{1, 2, 3, 4, 5},new int[]{3, 4, 5, 1, 2}));
-
+       CoinChange322 coinChange322 = new CoinChange322();
+       coinChange322.coinChange(new int[]{1,2,5},11);
     }
 
 }
